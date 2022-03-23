@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 145a7ffa832b65f4aa9d60618254ded7
+guid: 8b4c794da4cb7434eb4ca5cfc6bf6b17
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: mixamo.com
+    second: Boxing
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: Boxing
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 34
+      lastFrame: 42
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -122,7 +122,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 102ec01a1bde45d448c63857d0773df0, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 4740779fa2a3e164593a7049f9623fd6, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1

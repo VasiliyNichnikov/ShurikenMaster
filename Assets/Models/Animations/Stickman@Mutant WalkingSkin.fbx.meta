@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 2da3983bac24dbb4fb210f840f08eeba
+guid: c7b64eb4d250872408ac018ac6e37b9f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: mixamo.com
+    second: Mutant WalkingSkin
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: Mutant WalkingSkin
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 238
+      lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -122,7 +122,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 102ec01a1bde45d448c63857d0773df0, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 4740779fa2a3e164593a7049f9623fd6, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1

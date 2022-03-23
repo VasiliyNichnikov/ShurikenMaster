@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 102ec01a1bde45d448c63857d0773df0
+guid: 4740779fa2a3e164593a7049f9623fd6
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -86,7 +86,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: Enemy
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

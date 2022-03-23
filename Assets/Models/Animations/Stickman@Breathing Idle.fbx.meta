@@ -1,14 +1,11 @@
 fileFormatVersion: 2
-guid: 39d9a648bb8eb0442a0556fe20037d36
+guid: 4ab38b65cd94cf041b5d651b66ed03a4
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: mixamo.com
-  - first:
-      74: -8156728141770798927
-    second: Boxing
+    second: Breathing Idle
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -38,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Boxing
+      name: Breathing Idle
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 42
+      lastFrame: 238
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -125,7 +122,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 102ec01a1bde45d448c63857d0773df0, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 4740779fa2a3e164593a7049f9623fd6, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
