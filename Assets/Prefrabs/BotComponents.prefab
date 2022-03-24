@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8280622, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19872520, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
