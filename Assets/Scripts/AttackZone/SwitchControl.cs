@@ -1,17 +1,27 @@
 ﻿using Enemies;
+using MyUtils;
 using TimeDilation;
+using UnityEngine;
+
 
 namespace AttackZone
 {
     public abstract class SwitchControl
     {
         protected IEnemy[] Enemies;
-
-        protected SwitchControl(IEnemy[] enemies)
+        protected ITimeControl TimeControl;
+        
+        protected SwitchControl(IEnemy[] enemies, ITimeControl timeControl)
         {
             Enemies = enemies;
+            TimeControl = timeControl;
         }
 
-        public abstract void TurnOn();
+        protected bool CheckPlayer(GameObject obj)
+        {
+            return PlayerUtils.CheckThatObjectIsPlayer(obj);
+        }
+        
+        public abstract void TurnOn(GameObject obj);
     }
 }

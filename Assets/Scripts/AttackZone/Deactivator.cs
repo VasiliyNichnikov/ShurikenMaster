@@ -4,16 +4,21 @@ using UnityEngine;
 
 namespace AttackZone
 {
-    public class Deactivator: SwitchControl
+    public class Deactivator : SwitchControl
     {
-        public Deactivator(IEnemy[] enemies) : base(enemies)
+        private int _numberKilledEnemies;
+
+        public Deactivator(IEnemy[] enemies, ITimeControl timeControl) : base(enemies, timeControl)
         {
+            _numberKilledEnemies = 0;
         }
 
-
-        public override void TurnOn()
+        public override void TurnOn(GameObject obj)
         {
-            MonoBehaviour.print("Deactivator turn on");
+            if (CheckPlayer(obj))
+            {
+                TimeControl.Stop();
+            }
         }
     }
 }

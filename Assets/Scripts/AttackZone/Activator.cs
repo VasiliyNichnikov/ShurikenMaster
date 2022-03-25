@@ -6,14 +6,16 @@ namespace AttackZone
 {
     public class Activator: SwitchControl
     {
-        public Activator(IEnemy[] enemies) : base(enemies)
+        public Activator(IEnemy[] enemies, ITimeControl timeControl) : base(enemies, timeControl)
         {
         }
-
-
-        public override void TurnOn()
+        
+        public override void TurnOn(GameObject obj)
         {
-            MonoBehaviour.print("Activator turn on");
+            if (CheckPlayer(obj))
+            {
+                MonoBehaviour.print("Enemies go into battle");
+            }
         }
     }
 }
