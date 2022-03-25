@@ -106,13 +106,6 @@ namespace Spline.Editor
             BezierControlPointMode mode =
                 (BezierControlPointMode) EditorGUILayout.EnumPopup("Mode", _spline.GetControlPointMode(_selectedIndex));
             _spline.SetControlPointMode(_selectedIndex, mode);
-            // if (EditorGUI.EndChangeCheck())
-            // {
-            //     Undo.RecordObject(_spline, "Change Point Mode");
-            //     _spline.SetControlPointMode(_selectedIndex, mode);
-            //     EditorUtility.SetDirty(_spline);
-            // }
-
             EditorGUILayout.EndVertical();
         }
 
@@ -132,7 +125,7 @@ namespace Spline.Editor
                     Handles.DrawDottedLine(p2, p3, 4.0f);
                 }
 
-                Handles.DrawBezier(p0, p3, p1, p2, Color.cyan, null, 4f);
+                Handles.DrawBezier(p0, p3, p1, p2, Color.black, null, 4f);
                 p0 = p3;
             }
         }
@@ -141,7 +134,6 @@ namespace Spline.Editor
         {
             Vector3 point = _spline[index];
             float size = HandleUtility.GetHandleSize(point);
-            // SelectColorHandles(index);
             Handles.color = _modeColors[(int) _spline.GetControlPointMode(index)];
             if (_spline.IsActiveHandles &&
                 Handles.Button(point, _handleRotation, size * _handleSize, size * _handleSize, Handles.DotHandleCap))
@@ -165,14 +157,5 @@ namespace Spline.Editor
 
             return point;
         }
-
-        // private void SelectColorHandles(int index)
-        // {
-        //     Handles.color = Color.yellow;
-        //     if (_selectedIndex == index)
-        //         Handles.color = Color.white;
-        //     else if (index == _spline.LengthPoints - 1)
-        //         Handles.color = Color.blue;
-        // }
     }
 }
