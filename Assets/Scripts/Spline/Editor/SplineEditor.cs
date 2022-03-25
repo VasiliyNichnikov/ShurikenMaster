@@ -6,6 +6,13 @@ namespace Spline.Editor
     [CustomEditor(typeof(Spline))]
     public class SplineEditor : UnityEditor.Editor
     {
+        private static Color[] _modeColors =
+        {
+            Color.white,
+            Color.yellow,
+            Color.cyan
+        };
+
         private Spline _spline;
         private Transform _handleTransform;
         private Quaternion _handleRotation;
@@ -14,21 +21,29 @@ namespace Spline.Editor
 
         private void OnEnable()
         {
-            _spline = (global::Spline.Spline) target;
+            _spline = (Spline) target;
         }
 
         private void OnSceneGUI()
         {
             _handleTransform = _spline.transform;
-            _handleRotation = Tools.pivotRotation == PivotRotation.Local ? _handleTransform.rotation : Quaternion.identity;
+            _handleRotation = Tools.pivotRotation == PivotRotation.Local
+                ? _handleTransform.rotation
+                : Quaternion.identity;
 
             ShowPoints();
         }
 
         public override void OnInspectorGUI()
         {
+            _handleTransform = _spline.transform;
+            _handleRotation = Tools.pivotRotation == PivotRotation.Local
+                ? _handleTransform.rotation
+                : Quaternion.identity;
+
             DrawPointInspector();
-            _spline.IsActiveHandles = EditorGUILayout.ToggleLeft("Включить отображение ручек.", _spline.IsActiveHandles);
+            _spline.IsActiveHandles = EditorGUILayout.ToggleLeft("Включить отображение опорных точек и лепестков",
+                _spline.IsActiveHandles);
             SaveChanges("IsActiveHandles change");
 
             ButtonAddCurve();
@@ -65,7 +80,7 @@ namespace Spline.Editor
 
         private void ButtonRemoveCurve()
         {
-            if (GUILayout.Button("Удалить кривую с конца"))
+            if (GUILayout.Button("Удалить кривую в конце"))
             {
                 Undo.RecordObject(_spline, "Remove Curve");
                 _selectedIndex = 0;
@@ -84,8 +99,19 @@ namespace Spline.Editor
             {
                 Undo.RecordObject(_spline, "Move point");
                 EditorUtility.SetDirty(_spline);
-                _spline[_selectedIndex] = _handleTransform.InverseTransformPoint(point);
+                _spline[_selectedIndex] = point;
             }
+
+            EditorGUI.BeginChangeCheck();
+            BezierControlPointMode mode =
+                (BezierControlPointMode) EditorGUILayout.EnumPopup("Mode", _spline.GetControlPointMode(_selectedIndex));
+            _spline.SetControlPointMode(_selectedIndex, mode);
+            // if (EditorGUI.EndChangeCheck())
+            // {
+            //     Undo.RecordObject(_spline, "Change Point Mode");
+            //     _spline.SetControlPointMode(_selectedIndex, mode);
+            //     EditorUtility.SetDirty(_spline);
+            // }
 
             EditorGUILayout.EndVertical();
         }
@@ -113,10 +139,10 @@ namespace Spline.Editor
 
         private Vector3 GetAndDrawPoint(int index)
         {
-            Vector3 point = _handleTransform.TransformPoint(_spline[index]);
+            Vector3 point = _spline[index];
             float size = HandleUtility.GetHandleSize(point);
-
-            SelectColorHandles(index);
+            // SelectColorHandles(index);
+            Handles.color = _modeColors[(int) _spline.GetControlPointMode(index)];
             if (_spline.IsActiveHandles &&
                 Handles.Button(point, _handleRotation, size * _handleSize, size * _handleSize, Handles.DotHandleCap))
             {
@@ -133,20 +159,20 @@ namespace Spline.Editor
                 {
                     Undo.RecordObject(_spline, "Move point");
                     EditorUtility.SetDirty(_spline);
-                    _spline[index] = _handleTransform.InverseTransformPoint(point);
+                    _spline[index] = point;
                 }
             }
 
             return point;
         }
 
-        private void SelectColorHandles(int index)
-        {
-            Handles.color = Color.yellow;
-            if (_selectedIndex == index)
-                Handles.color = Color.white;
-            else if (index == _spline.LengthPoints - 1)
-                Handles.color = Color.blue;
-        }
+        // private void SelectColorHandles(int index)
+        // {
+        //     Handles.color = Color.yellow;
+        //     if (_selectedIndex == index)
+        //         Handles.color = Color.white;
+        //     else if (index == _spline.LengthPoints - 1)
+        //         Handles.color = Color.blue;
+        // }
     }
 }

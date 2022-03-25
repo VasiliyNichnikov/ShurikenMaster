@@ -6,9 +6,8 @@ namespace Spline
     {
         int NumberCurves { get; }
         Vector3 this[int index] { get; }
-        int LengthPoints { get; }
-        void AddCurve();
-        void RemoveCurve();
+        Vector3 GetPoint(float t);
+        Vector3 GetDirection(float t);
         Vector3[] GetPointsInCurves(int i);
     }
 }

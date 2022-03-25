@@ -14,7 +14,7 @@ namespace Spline
         private void Start()
         {
             _thisTransform = transform;
-            _points = CalculatePoints.GetEventlySpacedPoints(_spline, _spacing);
+            _points = CalculatePoints.GetEvenlySpacedPoints(_spline, _spacing);
             _thisTransform.position = _points[0];
         }
 

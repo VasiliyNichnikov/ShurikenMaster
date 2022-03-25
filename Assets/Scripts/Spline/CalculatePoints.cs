@@ -5,7 +5,7 @@ namespace Spline
 {
     public static class CalculatePoints
     {
-        public static Vector3[] GetEventlySpacedPoints(ISpline spline, float spacing)
+        public static Vector3[] GetEvenlySpacedPoints(ISpline spline, float spacing)
         {
             List<Vector3> points = new List<Vector3>();
             Vector3 firstPoint = spline[0];
@@ -26,6 +26,7 @@ namespace Spline
             
                 int divisions = Mathf.CeilToInt(estimatedCurveLength * 10);
                 float t = 0;
+                
                 while (t <= 1)
                 {
                     t += 1f / divisions;
@@ -35,15 +36,14 @@ namespace Spline
                     while (distanceSinceLastEvenPoint >= spacing)
                     {
                         float overshootDistance = distanceSinceLastEvenPoint - spacing;
-                        Vector3 newEventlySpacedPoint =
-                            pointOnCurve + (previousPoint - pointOnCurve).normalized * overshootDistance;
-                        points.Add(newEventlySpacedPoint);
+                        Vector3 newEvenlySpacedPoint = pointOnCurve + (previousPoint - pointOnCurve)
+                            .normalized * overshootDistance;
+                        points.Add(newEvenlySpacedPoint);
                         distanceSinceLastEvenPoint = overshootDistance;
-                        previousPoint = newEventlySpacedPoint;
+                        previousPoint = newEvenlySpacedPoint;
                     }
                     previousPoint = pointOnCurve;
                 }
-            
             }
         
             return points.ToArray();
