@@ -6,6 +6,7 @@ namespace MovementAlongSpline
 {
     public class Movement : IMovement
     {
+        public bool Pause { get; set; }
         public float SpeedMovement
         {
             get => _speedMovement;
@@ -17,7 +18,6 @@ namespace MovementAlongSpline
                     throw new OverflowException();
             }
         }
-
         public float SpeedRotation
         {
             get => _speedRotation;
@@ -49,12 +49,15 @@ namespace MovementAlongSpline
             _obj.position = _points[index];
             while (index < _points.Length)
             {
-                Vector3 positionPoint = _points[index];
-                UpdateRotation(positionPoint);
-                UpdatePosition(positionPoint);
+                if (Pause == false)
+                {
+                    Vector3 positionPoint = _points[index];
+                    UpdateRotation(positionPoint);
+                    UpdatePosition(positionPoint);
 
-                if (_obj.position == positionPoint)
-                    index++;
+                    if (_obj.position == positionPoint)
+                        index++;
+                }
                 yield return null;
             }
         }
