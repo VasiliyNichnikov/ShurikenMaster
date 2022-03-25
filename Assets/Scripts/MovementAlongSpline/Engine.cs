@@ -1,27 +1,26 @@
-﻿using Spline;
+﻿using System.Collections;
+using Spline;
 using UnityEngine;
 
 namespace MovementAlongSpline
 {
-    public class Engine : MonoBehaviour
+    public class Engine : MonoBehaviour, IEngine
     {
         public ISpline Spline => _spline;
         public Transform SelectedObject => _selectedObject;
         
-        [SerializeField, Range(1, 500)] private float _speedMovement;
-        [SerializeField, Range(1, 100)] private float _speedRotation;
         [SerializeField, Range(0, 1)] private float _spacing;
         [SerializeField] private Spline.Spline _spline;
         [SerializeField] private Transform _selectedObject;
 
         private IRoute _route;
         private IMovement _movement;
+        private IEnumerator _currentDrive;
         
         private void Start()
         {
             CreateRoute();
-            CreateMovement();
-            ToRun();
+            _movement = new Movement(_selectedObject, _route.Points);
         }
 
         private void CreateRoute()
@@ -31,16 +30,27 @@ namespace MovementAlongSpline
             _route.Build();
         }
 
-        private void CreateMovement()
+        public void ToRun()
         {
-            _movement = new Movement(_selectedObject, _route.Points);
-            _movement.SpeedMovement = _speedMovement;
-            _movement.SpeedRotation = _speedRotation;
+            _currentDrive ??= _movement.Drive();
+            StartCoroutine(_currentDrive);
         }
 
-        private void ToRun()
+        public void ToRun(float speedMovement, float speedRotation)
         {
-            StartCoroutine(_movement.Drive());
+            _movement.SpeedMovement = speedMovement;
+            _movement.SpeedRotation = speedRotation;
+            _currentDrive ??= _movement.Drive();
+            StartCoroutine(_currentDrive);
+        }
+
+        public void Stop()
+        {
+            if (_currentDrive != null)
+            {
+                StopCoroutine(_currentDrive);
+                _currentDrive = null;
+            }
         }
         
     }

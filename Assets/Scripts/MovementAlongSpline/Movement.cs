@@ -11,7 +11,7 @@ namespace MovementAlongSpline
             get => _speedMovement;
             set
             {
-                if (value > 0 && value <= 500)
+                if (value > 0 && value <= 50)
                     _speedMovement = value;
                 else
                     throw new OverflowException();
@@ -23,7 +23,7 @@ namespace MovementAlongSpline
             get => _speedRotation;
             set
             {
-                if (value > 0 && value <= 100)
+                if (value > 0 && value <= 5)
                     _speedRotation = value;
                 else
                     throw new OverflowException();
@@ -39,7 +39,8 @@ namespace MovementAlongSpline
         {
             _obj = obj;
             _points = points;
-            _speedMovement = 1;
+            _speedMovement = 1.0f;
+            _speedRotation = 1.0f;
         }
 
         public IEnumerator Drive()
