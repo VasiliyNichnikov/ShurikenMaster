@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using Spline;
+using UnityEngine;
 
 namespace MovementAlongSpline
 {
     public class Engine : MonoBehaviour
     {
+        public ISpline Spline => _spline;
+        public Transform SelectedObject => _selectedObject;
+        
         [SerializeField, Range(1, 500)] private float _speedMovement;
         [SerializeField, Range(1, 100)] private float _speedRotation;
         [SerializeField, Range(0, 1)] private float _spacing;
