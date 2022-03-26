@@ -1,20 +1,17 @@
-using Enemies;
-using TimeDilation;
 using UnityEngine;
 
 namespace AttackZone
 {
-    public class Activator: SwitchControl
+    public class Activator : SwitchControl
     {
-        public Activator(IEnemy[] enemies, ITimeControl timeControl) : base(enemies, timeControl)
-        {
-        }
+        
         
         public override void TurnOn(GameObject obj)
         {
-            if (CheckPlayer(obj))
+            if (CheckPlayer(obj) && Counter.Running == false)
             {
-                MonoBehaviour.print("Enemies go into battle");
+                print("Enemies go into battle");
+                Counter.ToRun(Enemies, TurnOff);
             }
         }
     }

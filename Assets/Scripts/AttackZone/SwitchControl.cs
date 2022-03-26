@@ -6,22 +6,29 @@ using UnityEngine;
 
 namespace AttackZone
 {
-    public abstract class SwitchControl
+    public delegate void MobsDestroyed();
+    
+    public abstract class SwitchControl : MonoBehaviour
     {
-        protected IEnemy[] Enemies;
-        protected ITimeControl TimeControl;
+        public IEnemy[] Enemies { get; set; }
+        public ITimeControl TimeControl { get; set; }
+        protected MobKillCounter Counter { get; private set; }
         
-        protected SwitchControl(IEnemy[] enemies, ITimeControl timeControl)
-        {
-            Enemies = enemies;
-            TimeControl = timeControl;
-        }
-
         protected bool CheckPlayer(GameObject obj)
         {
             return PlayerUtils.CheckThatObjectIsPlayer(obj);
         }
-        
+
         public abstract void TurnOn(GameObject obj);
+
+        public virtual void TurnOff()
+        {
+            TimeControl.Continue();
+        }
+
+        private void Start()
+        {
+            Counter = GetComponent<MobKillCounter>();
+        }
     }
 }
