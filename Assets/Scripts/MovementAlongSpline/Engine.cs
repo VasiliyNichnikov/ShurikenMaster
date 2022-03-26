@@ -8,7 +8,9 @@ namespace MovementAlongSpline
     {
         public ISpline Spline => _spline;
         public Transform SelectedObject => _selectedObject;
-        
+
+        [SerializeField, Header("Отключение двигателя")]
+        private bool _disableEngine;
         [SerializeField, Range(0, 1)] private float _spacing;
         [SerializeField] private Spline.Spline _spline;
         [SerializeField] private Transform _selectedObject;
@@ -32,6 +34,9 @@ namespace MovementAlongSpline
 
         public void ToRun()
         {
+            if(_disableEngine)
+                return;
+            
             if (_currentDrive == null)
                 _currentDrive = _movement.Drive();
             else
