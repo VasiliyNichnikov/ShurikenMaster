@@ -10,7 +10,7 @@ namespace Parameters.Player
         public float SpeedRotation => _speedRotation;
         
         [SerializeField] private string _name;
-        [SerializeField, Range(1, 50)] private float _speedMovement;
+        [SerializeField, Range(1, 30)] private float _speedMovement;
         [SerializeField, Range(0.01f, 5)] private float _speedRotation;
     }
 }
