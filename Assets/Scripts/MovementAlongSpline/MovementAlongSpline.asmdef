@@ -1,0 +1,16 @@
+{
+    "name": "MovementAlongSpline",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ccddccdcea38cd142898089741c4a6dc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

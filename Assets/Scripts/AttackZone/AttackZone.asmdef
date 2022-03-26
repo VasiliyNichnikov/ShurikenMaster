@@ -1,0 +1,18 @@
+{
+    "name": "AttackZone",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ccffedc0aa25a4a478ded713696854eb",
+        "GUID:0665d97cb2ecfc24f874828ca5ffa14d",
+        "GUID:7a2d997d56cc9c8468b0446095aaac59"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
