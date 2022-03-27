@@ -7,7 +7,7 @@ namespace Enemies.Robot
     public class RobotControl: Enemy
     {
         [SerializeField] private RobotParameter _parameter;
-        [SerializeField] private Transform _startPosition;
+        [SerializeField] private Transform _startBulletPosition;
         
         private Transform _parentBullet;
         private FocuserOnPlayer _focuser;
@@ -18,9 +18,11 @@ namespace Enemies.Robot
         
         private IEnumerator _runningFocuser;
 
-        public override void Attack()
+        public override void Die()
         {
-            
+            if(_runningFocuser != null)
+                StopCoroutine(_runningFocuser);
+            Destroy(this.gameObject);
         }
 
         public override void EnablingPreAttackDelay()
@@ -39,7 +41,7 @@ namespace Enemies.Robot
             
             Transform playerTransform = _player.transform;
             _focuser = new FocuserOnPlayer(_thisTransform, playerTransform, _parameter);
-            _weapon = new Weapon(_startPosition, playerTransform, _parentBullet, _parameter);
+            _weapon = new Weapon(_startBulletPosition, playerTransform, _parentBullet, _parameter);
         }
     }
 }

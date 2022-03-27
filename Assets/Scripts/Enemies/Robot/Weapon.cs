@@ -34,14 +34,14 @@ namespace Enemies.Robot
 
         private IEnumerator Fly(Vector3 direction, Transform bullet)
         {
-            while (true)
+            float distance = 0;
+            while (bullet != null && distance < 100)
             {
-                if(bullet != null)
-                    bullet.Translate(direction * Parameter.SpeedBullet * Time.deltaTime);
-                else
-                    break;
+                distance = Vector3.Distance(TransformObj.position, bullet.transform.position);
+                bullet.Translate(direction * Parameter.SpeedBullet * Time.deltaTime);
                 yield return null;
             }
+            Object.Destroy(bullet.gameObject);
         }
     }
 }
