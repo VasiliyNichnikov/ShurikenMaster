@@ -1,5 +1,4 @@
-﻿using Parameters.Segment;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DrawSlicing
 {

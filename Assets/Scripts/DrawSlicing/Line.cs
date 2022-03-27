@@ -19,37 +19,43 @@ namespace DrawSlicing
                 throw new ArgumentNullException();
             }
         }
+
+        private Transform _transformObj;
         private TrailParameters _parameters;
         private List<Vector3> _points;
         private DivisionIntoSegments _division;
 
-        public Line(TrailParameters parameters)
+        public Line(TrailParameters parameters, Transform transformObj)
         {
             _parameters = parameters;
             _points = new List<Vector3>();
+            _transformObj = transformObj;
         }
 
-        public void AddPoint(Vector3 pointPosition)
+        public void AddPoint(Vector3 pointWorldPosition)
         {
+            Vector3 pointLocalPosition = _transformObj.InverseTransformPoint(pointWorldPosition);
+            
             if (_points.Count == 0)
             {
-                _division = new DivisionIntoSegments(_parameters.AngleRestrictions);
-                _division.CreateFirstSegment(pointPosition);
-                _points.Add(pointPosition);
+                _division = new DivisionIntoSegments(_parameters, _transformObj);
+                _division.CreateFirstSegment(pointLocalPosition);
+                _points.Add(pointLocalPosition);
             }
             else
             {
-                if(CheckDistance(pointPosition))
+                if(CheckDistance(pointLocalPosition))
                 {
-                    MonoBehaviour.print("Add point");
-                    _points.Add(pointPosition);
-                    _division.AddPointToSegment(pointPosition);
+                    // MonoBehaviour.print("Add point");
+                    _points.Add(pointLocalPosition);
+                    _division.AddPointToSegment(pointLocalPosition);
                 }
             }
         }
 
         public void Clear()
         {
+            _division?.ClearSegments();
             _points.Clear();
         }
         
