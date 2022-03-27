@@ -1,0 +1,16 @@
+{
+    "name": "Shurikens",
+    "rootNamespace": "",
+    "references": [
+        "GUID:773026501a821a24a8262b5e94bf2e56"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
