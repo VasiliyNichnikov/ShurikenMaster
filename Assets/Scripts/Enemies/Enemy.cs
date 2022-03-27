@@ -2,16 +2,12 @@
 
 namespace Enemies
 {
-    public abstract class Enemy : MonoBehaviour, IEnemy
-    {
-        // TODO тестовая переменная
-        [Header("Используется для тестирования")] public bool IsDeadInspector;
+    public abstract class Enemy : MonoBehaviour
+    {   
+        public bool IsDead { get; }
 
-        public bool IsDead => IsDeadInspector;
+        public abstract void Attack();
 
-        public void Attack()
-        {
-            
-        }
+        public abstract void EnablingPreAttackDelay();
     }
 }
