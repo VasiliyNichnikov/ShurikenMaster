@@ -180,7 +180,7 @@ namespace Spline
                 new Vector3(3, 0, 0),
                 new Vector3(4, 0, 0)
             };
-            _modes = new BezierControlPointMode[]
+            _modes = new []
             {
                 BezierControlPointMode.Free,
                 BezierControlPointMode.Free

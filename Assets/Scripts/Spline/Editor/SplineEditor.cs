@@ -130,12 +130,13 @@ namespace Spline.Editor
             }
         }
 
-        private Vector3 GetAndDrawPoint(int index, bool mainPoint = false)
+        private Vector3 GetAndDrawPoint(int index, bool mainPoint=false)
         {
             Vector3 point = _spline[index];
             float size = HandleUtility.GetHandleSize(point);
             Handles.color = mainPoint ? Color.green : _modeColors[(int) _spline.GetControlPointMode(index)];
-
+            
+            
             if (_spline.IsActiveHandles &&
                 Handles.Button(point, _handleRotation, size * _handleSize, size * _handleSize, Handles.DotHandleCap))
             {
