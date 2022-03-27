@@ -2508,7 +2508,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "e89b95c6d251442aacf44ac57cce23fa",
     "m_Id": 0,
-    "m_DisplayName": "Bot Color",
+    "m_DisplayName": "StripColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

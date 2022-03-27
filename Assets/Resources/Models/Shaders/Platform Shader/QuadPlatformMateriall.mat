@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BotMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 55bea3cffe03c2848901348dfe0687d0, type: 3}
+  m_Name: QuadPlatformMateriall
+  m_Shader: {fileID: -6465566751694194690, guid: 2fc2d7db2a38e364e9069bdc9a3e4213, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -31,9 +31,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - Vector1_11cc1f2f4eb34ceb8e6c2a3ff8f9bca5: 0.23
+    - Vector1_e17bcf36c8874df594a5061f5acd72c7: 0
     m_Colors:
-    - Color_1b4607858e71420f80000dce7254fb4f: {r: 0.32075468, g: 0.32075468, b: 0.32075468, a: 0}
-    - Color_5956c9014c2d4b0baa21f74d9e2520ac: {r: 1, g: 0, b: 0, a: 0}
-    - Color_90eb8dfcd3484b70a339540341b989b6: {r: 0, g: 0, b: 0, a: 0}
+    - Color_10dfdbd352cb4482b81d7ced1e6f8bb1: {r: 0.709, g: 0.709, b: 0.709, a: 0}
+    - Color_595029b656604d36a786f8e6487ccdc1: {r: 0.735849, g: 0.735849, b: 0.735849, a: 0}
+    - Color_bf97741ae4b045ccbdca15c1710127d0: {r: 0.745, g: 0.84275, b: 1, a: 0}
+    - Color_e614be3a62ea4bcbb6e21bd538e18f06: {r: 0.41509426, g: 0.41509426, b: 0.41509426, a: 0}
   m_BuildTextureStacks: []
