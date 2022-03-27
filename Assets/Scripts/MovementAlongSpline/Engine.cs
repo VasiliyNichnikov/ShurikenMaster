@@ -11,7 +11,7 @@ namespace MovementAlongSpline
 
         [SerializeField, Header("Отключение двигателя")]
         private bool _disableEngine;
-        [SerializeField, Range(0, 1)] private float _spacing;
+        [SerializeField, Header("Расстояние между точками при движение"), Range(0, 1)] private float _spacing;
         [SerializeField] private Spline.Spline _spline;
         [SerializeField] private Transform _selectedObject;
 
