@@ -15,4 +15,3 @@ MonoBehaviour:
   _angleRestrictions: 50
   _shiftZ: 10
   _step: 0.5
-  _particleTrail: {fileID: 19872990, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
