@@ -28,14 +28,12 @@ namespace AttackZone
             
             while (true)
             {
+                _numberKilledEnemies = 0;
                 foreach (var enemy in enemies)
                 {
                     if (enemy == null)
                         _numberKilledEnemies++;
-                    else
-                        _numberKilledEnemies = 0;
                 }
-
                 if (_numberKilledEnemies == enemies.Length)
                 {
                     challenge();

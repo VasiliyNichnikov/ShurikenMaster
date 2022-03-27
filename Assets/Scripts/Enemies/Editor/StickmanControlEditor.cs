@@ -35,7 +35,10 @@ namespace Enemies.Editor
             if (GUILayout.Button("Сбросить EndPoint"))
             {
                 Undo.RecordObject(_control, "Remove end point");
-                _control.EndPoint = _handleTransform.position;
+                Vector3 reset = new Vector3(_handleTransform.position.x, 
+                    _handleTransform.position.y,
+                    _handleTransform.position.z + 2f);
+                _control.EndPoint = reset;
                 EditorUtility.SetDirty(_control);
             }
         }
