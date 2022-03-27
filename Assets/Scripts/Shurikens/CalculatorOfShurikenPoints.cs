@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Shurikens
 {
-    public class CalculatorOfShurikenDirections
+    public class CalculatorOfShurikenPoints
     {
         private DivisionIntoSegments _separator;
         private float _shurikenLength;
         private float _space;
         
-        public CalculatorOfShurikenDirections(DivisionIntoSegments separator, float shurikenLength, float space)
+        public CalculatorOfShurikenPoints(DivisionIntoSegments separator, float shurikenLength, float space)
         {
             _space = space;
             _separator = separator;

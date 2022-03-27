@@ -2,7 +2,9 @@
     "name": "Shurikens",
     "rootNamespace": "",
     "references": [
-        "GUID:773026501a821a24a8262b5e94bf2e56"
+        "GUID:773026501a821a24a8262b5e94bf2e56",
+        "GUID:831350a750507de42b751af292ca50b8",
+        "GUID:ccffedc0aa25a4a478ded713696854eb"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
