@@ -42,7 +42,7 @@ namespace AttackZone
 
         private void InitParametersSwitchControl(SwitchControl control)
         {
-            control.Enemies = _enemies as IEnemy[];
+            control.Enemies = _enemies;
             control.TimeControl = _timeControl;
         }
         
