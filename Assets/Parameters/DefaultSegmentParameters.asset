@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f81d7dacafe4c3daf17435394033aa6, type: 3}
   m_Name: DefaultSegmentParameters
   m_EditorClassIdentifier: 
-  _angleRestrictions: 50
+  _angleRestrictions: 20
   _shiftZ: 10
-  _step: 0.5
+  _step: 0.408
