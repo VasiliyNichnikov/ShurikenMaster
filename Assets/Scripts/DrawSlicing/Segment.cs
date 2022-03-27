@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DrawSlicing
 {
@@ -37,16 +39,21 @@ namespace DrawSlicing
         public Vector2[] GetDirectionPoints(float shurikenLength, float space)
         {
             int numberShurikens = GetNumberOfShurikensInSegment(shurikenLength, space);
-            Vector2[] points = new Vector2[numberShurikens]; 
+            if (numberShurikens == 0)
+                return Array.Empty<Vector2>();
+            
+            Vector2[] points = new Vector2[numberShurikens + 1]; 
             
             float step = _length / numberShurikens;
-            float distanceToPoint = step;
+            float distanceToPoint = 0;
+            
             for (int i = 0; i < numberShurikens; i++)
             {
                 points[i] = GetPoint(distanceToPoint);
                 distanceToPoint += step;
             }
-
+            points[points.Length - 1] = _positionEnd;
+            
             return points;
         }
 

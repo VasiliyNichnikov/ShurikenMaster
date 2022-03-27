@@ -37,12 +37,10 @@ namespace DrawSlicing
             Vector2 duration = positionPoint - last.PositionEnd;
             if (Calculations.SegmentBelongToContinuationOfCurrentSegment(current, duration, _parameters.AngleRestrictions))
             {
-                // MonoBehaviour.print("Adding to the previous line");
                 last.PositionEnd = positionPoint;
             }
             else
             {
-                // MonoBehaviour.print("Creating a new segment");
                 Segment segment = new Segment(last.PositionEnd);
                 segment.PositionEnd = positionPoint;
                 _segments.Add(segment);
