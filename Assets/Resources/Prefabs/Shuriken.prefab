@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2491701973818185245
 Transform:
   m_ObjectHideFlags: 0
@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 6376426320851611834}
   - component: {fileID: 2957215128832308461}
   - component: {fileID: 9204312745115154656}
+  - component: {fileID: 1405443263157890475}
   m_Layer: 0
   m_Name: ShurikenDeleterFeedback
   m_TagString: Untagged
@@ -218,11 +219,12 @@ MonoBehaviour:
   Feedbacks:
   - {fileID: 2957215128832308461}
   - {fileID: 9204312745115154656}
+  - {fileID: 1405443263157890475}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
   AutoChangeDirectionOnEnd: 0
-  AutoPlayOnStart: 1
+  AutoPlayOnStart: 0
   AutoPlayOnEnable: 1
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
@@ -261,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f129222f02399ae42b78955d953ada11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Active: 1
+  Active: 0
   Label: Deleter
   Chance: 100
   Timing:
@@ -310,7 +312,7 @@ MonoBehaviour:
   Chance: 100
   Timing:
     TimescaleMode: 0
-    InitialDelay: 0.3
+    InitialDelay: 0.1
     CooldownDuration: 0
     ExcludeFromHoldingPauses: 0
     InterruptsOnStop: 1
@@ -337,6 +339,43 @@ MonoBehaviour:
   StateOnStop: 1
   SetStateOnReset: 0
   StateOnReset: 1
+--- !u!114 &1405443263157890475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9064699186438003546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a735df4ed5161bc4a89ba41ab2149469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Destroy
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 5
+    CooldownDuration: 0
+    ExcludeFromHoldingPauses: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  TargetGameObject: {fileID: 7581042082462152037}
+  Mode: 0
 --- !u!1001 &4551314165688349513
 PrefabInstance:
   m_ObjectHideFlags: 0
