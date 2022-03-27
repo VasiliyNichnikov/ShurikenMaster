@@ -38,16 +38,6 @@ namespace Spline
                 _points[index] = transform.InverseTransformPoint(value);
             }
         }
-        
-        public int ControlPointCount {
-            get {
-                return _points.Length;
-            }
-        }
-
-        public Vector3 GetControlPoint (int index) {
-            return this[index];
-        }
 
         public void SetControlPoint (int index, Vector3 point) {
             if (index % 3 == 0) {
@@ -174,41 +164,6 @@ namespace Spline
                 enforcedTangent = enforcedTangent.normalized * Vector3.Distance(middle, this[enforcedIndex]);
             }
             this[enforcedIndex] = middle + enforcedTangent;
-            
-            // Restore
-            // if (index <= middleIndex)
-            // {
-            //     fixedIndex = middleIndex - 1;
-            //     if (fixedIndex < 0)
-            //     {
-            //         fixedIndex = _points.Length - 2;
-            //     }
-            //
-            //     enforcedIndex = middleIndex + 1;
-            //     if (enforcedIndex >= _points.Length)
-            //     {
-            //         enforcedIndex = 1;
-            //     }
-            // }
-            // else
-            // {
-            //     fixedIndex = middleIndex + 1;
-            //     if (fixedIndex >= _points.Length)
-            //     {
-            //         fixedIndex = 1;
-            //     }
-            //
-            //     enforcedIndex = middleIndex - 1;
-            //     if (enforcedIndex < 0)
-            //     {
-            //         enforcedIndex = _points.Length - 2;
-            //     }
-            // }
-            //
-            // Vector3 middle = _points[middleIndex];
-            // Vector3 enforcedTangent = middle - _points[fixedIndex];
-            // enforcedTangent = enforcedTangent.normalized * Vector3.Distance(middle, _points[enforcedIndex]);
-            // _points[enforcedIndex] = middle + enforcedTangent;
         }
 
         private bool CheckIfCurvesExist()
