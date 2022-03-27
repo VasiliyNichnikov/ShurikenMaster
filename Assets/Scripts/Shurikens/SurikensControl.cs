@@ -13,7 +13,7 @@ namespace Shurikens
         
         private const float _shurikenLength = 0.5753977f;
         private PowerShuriken[] _shurikens;
-
+        private CalculatorOfShurikenPoints _shurikenPoints;
 
         public void Launch(DrawTrail drawTrail)
         {
@@ -27,8 +27,8 @@ namespace Shurikens
         private void CreateSurikens(DrawTrail drawTrail)
         {
             var separator = drawTrail.Line.Division;
-            var shurikenDirections = new CalculatorOfShurikenPoints(separator, _shurikenLength, _parameters.Space);
-            var creator = new CreatorShurikens(shurikenDirections, _parameters.Shuriken, _parent, _startTransform.position);
+            _shurikenPoints = new CalculatorOfShurikenPoints(separator, _shurikenLength, _parameters.Space);
+            var creator = new CreatorShurikens(_shurikenPoints, _parameters.Shuriken, _parent, _startTransform.position);
             _shurikens = creator.GetNewShurikens();
         }
 
@@ -39,6 +39,19 @@ namespace Shurikens
             
             var launcher = new LauncherShurikens(_shurikens, _parameters.Speed);
             launcher.Fly();
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (_shurikenPoints != null)
+            {
+                Vector3[] points = _shurikenPoints.GetPoints();
+                foreach (var point in points)
+                {
+                    Gizmos.color = Color.blue;
+                    Gizmos.DrawSphere(point, 0.1f);
+                }
+            }
         }
     }
 }
