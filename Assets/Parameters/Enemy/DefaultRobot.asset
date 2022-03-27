@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0289107afaf840cbbdd29137317a0af3, type: 3}
+  m_Name: DefaultRobot
+  m_EditorClassIdentifier: 
+  _delayBeforeFocusing: 1
+  _speedRotatationHead: 15
+  _bullet: {fileID: 557772575362926534, guid: f04601ab1f912a64c9b737a98e34557e, type: 3}
+  _speedBullet: 5
+  _minAngle: 3
+  _minDelayBetweenShooting: 1
+  _maxDelayBetweenShooting: 3

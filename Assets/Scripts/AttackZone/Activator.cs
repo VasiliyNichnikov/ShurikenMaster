@@ -4,14 +4,19 @@ namespace AttackZone
 {
     public class Activator : SwitchControl
     {
-        
-        
         public override void TurnOn(GameObject obj)
         {
-            if (CheckPlayer(obj) && Counter.Running == false)
+            if (!CheckPlayer(obj) || Counter.Running) return;
+            
+            Counter.ToRun(Enemies, TurnOff);
+            StartEnemies();
+        }
+
+        private void StartEnemies()
+        {
+            foreach (var enemy in Enemies)
             {
-                print("Enemies go into battle");
-                Counter.ToRun(Enemies, TurnOff);
+                enemy.EnablingPreAttackDelay();
             }
         }
     }

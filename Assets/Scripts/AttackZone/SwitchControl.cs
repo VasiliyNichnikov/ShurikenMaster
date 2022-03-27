@@ -10,7 +10,7 @@ namespace AttackZone
     
     public abstract class SwitchControl : MonoBehaviour
     {
-        public IEnemy[] Enemies { get; set; }
+        public Enemy[] Enemies { get; set; }
         public ITimeControl TimeControl { get; set; }
         protected MobKillCounter Counter { get; private set; }
         

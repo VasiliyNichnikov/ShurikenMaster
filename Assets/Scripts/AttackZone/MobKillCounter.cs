@@ -12,7 +12,7 @@ namespace AttackZone
         private int _numberKilledEnemies;
         private IEnumerator _runningCheck;
     
-        public void ToRun(IEnemy[] enemies, MobsDestroyed challenge)
+        public void ToRun(Enemy[] enemies, MobsDestroyed challenge)
         {
             if (_runningCheck == null)
             {
@@ -21,7 +21,7 @@ namespace AttackZone
             }
         }
 
-        private IEnumerator CheckNumberOfLiveMobs(IEnemy[] enemies, MobsDestroyed challenge)
+        private IEnumerator CheckNumberOfLiveMobs(Enemy[] enemies, MobsDestroyed challenge)
         {
             if (enemies.Length == 0)
                 throw new Exception("The array must not be empty");
