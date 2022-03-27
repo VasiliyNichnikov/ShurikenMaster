@@ -16,6 +16,8 @@ namespace AttackZone
         {
             foreach (var enemy in Enemies)
             {
+                if(enemy == null)
+                    continue;
                 enemy.EnablingPreAttackDelay();
             }
         }
