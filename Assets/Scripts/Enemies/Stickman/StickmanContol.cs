@@ -26,8 +26,11 @@ namespace Enemies.Stickman
             StartCoroutine(_runningWalk);
         }
 
-        public override void Attack()
+        public override void Die()
         {
+            if(_runningWalk != null)
+                StopCoroutine(_runningWalk);
+            Destroy(this.gameObject);
         }
 
         private void Start()

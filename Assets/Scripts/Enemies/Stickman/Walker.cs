@@ -22,14 +22,14 @@ namespace Enemies.Stickman
         public IEnumerator Go(IEnumerator attack)
         {
             var positionObject = _transformObject.position;
-            Vector3 direction = _endPoint - positionObject;
             float distance = Vector3.Distance(positionObject, _endPoint);
             ChangeConditionAnimator(true);
             while (distance > _parameter.MinDistanceToPoint)
             {
                 positionObject = _transformObject.position;
-                _transformObject.Translate(direction * _parameter.Speed * Time.deltaTime);
+                positionObject = Vector3.MoveTowards(positionObject, _endPoint, _parameter.Speed * Time.deltaTime);
                 distance = Vector3.Distance(positionObject, _endPoint);
+                _transformObject.position = positionObject;
                 yield return null;
             }
             ChangeConditionAnimator();

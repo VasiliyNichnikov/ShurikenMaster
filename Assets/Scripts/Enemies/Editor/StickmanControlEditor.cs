@@ -10,7 +10,6 @@ namespace Enemies.Editor
         private StickmanContol _control;
         private Transform _handleTransform;
         private Quaternion _handleRotation;
-        private const float _handleSize = 0.1f;
 
         public override void OnInspectorGUI()
         {
@@ -26,9 +25,8 @@ namespace Enemies.Editor
         private void OnSceneGUI()
         {
             _handleTransform = _control.transform;
-            _handleRotation = Tools.pivotRotation == PivotRotation.Local
-                ? _handleTransform.rotation
-                : Quaternion.identity;
+            _handleRotation = Tools.pivotRotation == PivotRotation.Local ? _handleTransform.rotation : Quaternion.identity;
+            
             DrawEndPoint();
         }
 
@@ -48,6 +46,7 @@ namespace Enemies.Editor
             
             EditorGUI.BeginChangeCheck();
             _control.EndPoint = Handles.DoPositionHandle(_control.EndPoint, _handleRotation);
+            _control.EndPoint.y = _handleTransform.position.y;
             Handles.DrawLine(_control.EndPoint, _handleTransform.position);
 
             if (EditorGUI.EndChangeCheck())
