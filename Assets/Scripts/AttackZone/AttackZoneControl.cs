@@ -54,7 +54,7 @@ namespace AttackZone
 
         private void OnTriggerExit(Collider other)
         {
-            // _playerInZone = false;
+            _playerInZone = false;
             _deactivator.TurnOn(other.gameObject);
         }
     }
