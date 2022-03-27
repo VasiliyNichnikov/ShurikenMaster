@@ -1,7 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e42f3540-891f-4e4d-b9e3-02503416cd12" name="Changes" comment="" />
+    <list default="true" id="e42f3540-891f-4e4d-b9e3-02503416cd12" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ShurikenMaster/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ShurikenMaster/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ShurikenMaster/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Parameters/DefaultSegmentParameters.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Parameters/DefaultSegmentParameters.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Parameters/DefaultShuriken.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Parameters/DefaultShuriken.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Shuriken.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Shuriken.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/DrawLines.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/DivisionIntoSegments.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/DivisionIntoSegments.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/DrawSlicing.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/DrawSlicing.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/DrawTrail.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/DrawTrail.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/IClickTrail.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/Line.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/Line.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/Segment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/Segment.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/Trail.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/Trail.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionWithScreen/InteractionWithScreen.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionWithScreen/InteractionWithScreen.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionWithScreen/TouchProcessing.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionWithScreen/TouchProcessing.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyUtils/Calculations.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyUtils/Calculations.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyUtils/ShurikenUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyUtils/ShurikenUtils.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyUtils/ThisShuriken.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyUtils/ThisShuriken.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Parameters/Segment/TrailParameters.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Parameters/Segment/TrailParameters.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Parameters/Shuriken.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Parameters/Shuriken/ShurikenParameters.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Parameters/Shuriken/ShurikenParameters.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/CalculatorOfShurikenPoints.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/CalculatorOfShurikenPoints.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/CreatorShurikens.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/CreatorShurikens.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/LauncherShurikens.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/LauncherShurikens.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/PowerShuriken.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/PowerShuriken.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/Shurikens.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/Shurikens.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/SurikensControl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/SurikensControl.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/SwitchRigidbody.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shurikens/SwitchRigidbody.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/SkyboxMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox_Mat.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/SkyboxMat.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/Epic Toon FX/Demo/Scripts/ETFXButtonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/Epic Toon FX/Demo/Scripts/ETFXButtonScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/Epic Toon FX/Materials/Misc/Unsorted/ice_spikes_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/Epic Toon FX/Materials/Misc/Unsorted/ice_spikes_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/Epic Toon FX/Materials/Misc/Unsorted/snowflake_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/Epic Toon FX/Materials/Misc/Unsorted/snowflake_AB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Barrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Barrel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Barrel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Barrel.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BlockPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BlockPlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BlockPlatform.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BlockPlatform.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BotComponents.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BotComponents.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BotComponents.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BotComponents.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Box.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Box.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Box.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Helicopter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Helicopter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Helicopter.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Helicopter.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlatformArc.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlatformArc.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlatformArc.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlatformArc.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stickman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stickman.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stickman.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stickman.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/StickmanArmor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/StickmanArmor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/StickmanArmor.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/StickmanArmor.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Meshes/Shurikens/Shuriken Quad.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Meshes/Shurikens/Shuriken Quad.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Barrel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Barrel.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/BlockPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/BlockPlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/BlockPlatform.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/BlockPlatform.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/BotComponents.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/BotComponents.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/BotComponents.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/BotComponents.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Box.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Box.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Box.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Helicopter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Helicopter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Helicopter.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Helicopter.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/PlatformArc.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/PlatformArc.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/PlatformArc.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/PlatformArc.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Stickman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Stickman.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Stickman.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/Stickman.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/StickmanArmor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/StickmanArmor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefrabs/StickmanArmor.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefrabs/StickmanArmor.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lvl 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lvl 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackZone/AttackZoneControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackZone/AttackZoneControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementAlongSpline/Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovementAlongSpline/Engine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionWithScreen.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parameters/Segment.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Help_Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Help_Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/UniversalIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/UniversalIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DrawLines.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrawSlicing/IClickTrail.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +194,7 @@
       <updated>1648202793608</updated>
       <workItem from="1648202808562" duration="32600000" />
       <workItem from="1648282051428" duration="45045000" />
-      <workItem from="1648369181532" duration="10176000" />
+      <workItem from="1648369181532" duration="10772000" />
     </task>
     <servers />
   </component>

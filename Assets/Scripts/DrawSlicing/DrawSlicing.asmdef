@@ -1,0 +1,17 @@
+{
+    "name": "DrawLine",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ccffedc0aa25a4a478ded713696854eb",
+        "GUID:831350a750507de42b751af292ca50b8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
