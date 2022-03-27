@@ -7,7 +7,7 @@ namespace InteractionWithScreen
     public class TouchProcessing : MonoBehaviour
     {
         [SerializeField] private DrawTrail _clickTrail;
-        [SerializeField] private LaunchShurikens _shurikens;
+        [SerializeField] private SurikensControl _shurikens;
         
         private void Update()
         {
@@ -25,7 +25,7 @@ namespace InteractionWithScreen
             if (Input.GetMouseButtonUp(0))
             {
                 _clickTrail.ClickUp(mousePosition);
-                _shurikens.ClickUp(_clickTrail);
+                _shurikens.Launch(_clickTrail);
             }
         }
     }
