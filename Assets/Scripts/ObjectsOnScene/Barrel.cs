@@ -1,4 +1,5 @@
 using Enemies;
+using MoreMountains.Feedbacks;
 using MyUtils;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace ObjectsOnScene
         [SerializeField, Header("Сила удара"), Range(0, 1000)]
         private float _power;
 
+        [SerializeField] private MMFeedbacks _feedbacks;
+        
         private Transform _explosionTransform;
 
         public void OnTriggerEnter(Collider other)
@@ -19,7 +22,7 @@ namespace ObjectsOnScene
             if (ShurikenUtils.CheckThatObjectIsSuriken(other.gameObject))
             {
                 Explode();
-                Destroy(gameObject);
+                _feedbacks.PlayFeedbacks();
             }
         }
 
