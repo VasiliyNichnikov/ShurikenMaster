@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 2965184020572966231}
   - component: {fileID: 8267394450409319193}
   - component: {fileID: 5800941301770038334}
+  - component: {fileID: 2721003206905742703}
   m_Layer: 7
   m_Name: Stickman
   m_TagString: Untagged
@@ -763,7 +764,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621383296360975747}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.66672087
   m_Height: 3.7958436
@@ -781,6 +782,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb5a639fdb5480bb1351d6a9af5c55e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2721003206905742703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621383296360975747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8666815a23527804fbcd2b6daee00ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _allRB:
+  - {fileID: 6429547940858769633}
+  - {fileID: 385331385945681719}
+  - {fileID: 8958289958927389106}
+  - {fileID: 4678053835063506580}
+  - {fileID: 6984319269049061825}
+  - {fileID: 331418871080563430}
+  - {fileID: 8074081133564426756}
+  - {fileID: 5458354113908855152}
+  - {fileID: 7128290339094337400}
+  - {fileID: 6304642594946947015}
+  - {fileID: 7180586731413214196}
+  _allColliders:
+  - {fileID: 6429547940858769632}
+  - {fileID: 385331385945681721}
+  - {fileID: 8958289958927389109}
+  - {fileID: 4678053835063506582}
+  - {fileID: 6984319269049061824}
+  - {fileID: 331418871080563432}
+  - {fileID: 8074081133564426758}
+  - {fileID: 5458354113908855155}
+  - {fileID: 7128290339094337403}
+  - {fileID: 6304642594946947017}
+  - {fileID: 7180586731413214199}
 --- !u!1 &1825435386695840029
 GameObject:
   m_ObjectHideFlags: 0

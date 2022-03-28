@@ -31,7 +31,7 @@ namespace AttackZone
                 _numberKilledEnemies = 0;
                 foreach (var enemy in enemies)
                 {
-                    if (enemy == null)
+                    if (enemy.IsDead)
                         _numberKilledEnemies++;
                 }
                 if (_numberKilledEnemies == enemies.Length)

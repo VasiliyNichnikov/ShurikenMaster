@@ -1,5 +1,4 @@
-﻿using Enemies;
-using MyUtils;
+﻿using MyUtils;
 using TimeDilation;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ namespace AttackZone
     
     public abstract class SwitchControl : MonoBehaviour
     {
-        public Enemy[] Enemies { get; set; }
+        public Enemies.Enemy[] Enemies { get; set; }
         public ITimeControl TimeControl { get; set; }
         protected MobKillCounter Counter { get; private set; }
         
