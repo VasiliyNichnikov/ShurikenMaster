@@ -14,8 +14,14 @@ namespace CuttingWithShurikens
             if (hull != null)
             {
                 print("hull");
-                GameObject left = hull.CreateLowerHull(_objectToSlice, _material);
-                GameObject right = hull.CreateUpperHull(_objectToSlice, _material);
+                // Base left = hull.CreateLowerHull(_objectToSlice, _material).AddComponent(typeof(Base)) as Base;
+                // Base right = hull.CreateUpperHull(_objectToSlice, _material).AddComponent(typeof(Base)) as Base;
+                //
+                // left.SetRotationY(_objectToSlice.transform.eulerAngles.y);
+                // right.SetRotationY(_objectToSlice.transform.eulerAngles.y);
+
+                // slicedObjectLeftPos.SetPositionY(left.GetPositionY());
+                // slicedObjectRightPos.SetPositionY(right.GetPositionY());
                 
                 // left.SetRotationY(objectToSlice.transform.eulerAngles.y);
                 // right.SetRotationY(objectToSlice.transform.eulerAngles.y);
