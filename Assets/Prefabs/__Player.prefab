@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _disableEngine: 0
-  _spacing: 0.25
+  _spacing: 0.5
   _spline: {fileID: 0}
   _selectedObject: {fileID: 4236745936216595312}
 --- !u!114 &4236745936216595323

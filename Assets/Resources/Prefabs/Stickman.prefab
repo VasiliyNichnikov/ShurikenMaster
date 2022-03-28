@@ -756,6 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EndPoint: {x: 0, y: 0, z: 0}
   _parameter: {fileID: 11400000, guid: 81bc33ac0ddc83849be0f7382ede191a, type: 2}
+  _particleAtDeath: {fileID: 8349444161552445350}
 --- !u!136 &8267394450409319193
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4720,5 +4721,10 @@ PrefabInstance:
 --- !u!4 &8349444161537246026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 430842, guid: de85f8f81ea29ea479250adb36debd92, type: 3}
+  m_PrefabInstance: {fileID: 8349444161537413552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8349444161552445350 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19889686, guid: de85f8f81ea29ea479250adb36debd92, type: 3}
   m_PrefabInstance: {fileID: 8349444161537413552}
   m_PrefabAsset: {fileID: 0}

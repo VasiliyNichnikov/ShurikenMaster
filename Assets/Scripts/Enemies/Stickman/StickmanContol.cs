@@ -11,6 +11,8 @@ namespace Enemies.Stickman
         public Vector3 EndPoint;
 
         [SerializeField] private StickmanParameter _parameter;
+        [SerializeField] private ParticleSystem _particleAtDeath;
+        
         private Attacker _attacker;
         private Walker _walker;
         private Transform _thisTransform;
@@ -29,8 +31,13 @@ namespace Enemies.Stickman
 
         public override void Die()
         {
+            if(IsDead)
+                return;
+            
             if(_runningWalk != null)
                 StopCoroutine(_runningWalk);
+            
+            _particleAtDeath.Play();
             _animator.enabled = false;
             _stateRagdoll.Destruction();
             _collider.enabled = false;

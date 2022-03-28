@@ -251,6 +251,7 @@ MonoBehaviour:
   _parameter: {fileID: 11400000, guid: d20bc1f419fc88841a271892e4b7b0a2, type: 2}
   _startBulletPosition: {fileID: 6656128849812336156}
   _particleAttack: {fileID: 2939679109052553559}
+  _feedbacksAtDeath: {fileID: 1177593692459026914}
 --- !u!135 &2967418059576447500
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -387,6 +388,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 406662, guid: f6ac01c8c44430d46815af0e77bdcfdd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19835194, guid: f6ac01c8c44430d46815af0e77bdcfdd, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19904602, guid: f6ac01c8c44430d46815af0e77bdcfdd, type: 3}

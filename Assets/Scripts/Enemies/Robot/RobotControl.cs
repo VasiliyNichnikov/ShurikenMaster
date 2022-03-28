@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using MoreMountains.Feedbacks;
 using Parameters.Enemy;
 using UnityEngine;
 
@@ -9,7 +10,8 @@ namespace Enemies.Robot
         [SerializeField] private RobotParameter _parameter;
         [SerializeField] private Transform _startBulletPosition;
         [SerializeField] private ParticleSystem _particleAttack;
-
+        [SerializeField] private MMFeedbacks _feedbacksAtDeath;
+        
         private Rigidbody _rigidbody;
 
         private Transform _parentBullet;
@@ -23,10 +25,14 @@ namespace Enemies.Robot
 
         public override void Die()
         {
+            if(IsDead)
+                return;
+            
             if (_runningFocuser != null)
                 StopCoroutine(_runningFocuser);
             _rigidbody.isKinematic = false;
             _rigidbody.useGravity = true;
+            _feedbacksAtDeath.PlayFeedbacks();
             IsDead = true;
         }
 
