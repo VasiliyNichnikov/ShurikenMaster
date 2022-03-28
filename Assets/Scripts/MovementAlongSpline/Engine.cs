@@ -36,12 +36,14 @@ namespace MovementAlongSpline
         {
             if(_disableEngine)
                 return;
-            
+
             if (_currentDrive == null)
+            {
                 _currentDrive = _movement.Drive();
+                StartCoroutine(_currentDrive);
+            }
             else
                 _movement.Pause = false;
-            StartCoroutine(_currentDrive);
         }
 
         public void ToRun(float speedMovement, float speedRotation)

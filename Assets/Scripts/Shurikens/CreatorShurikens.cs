@@ -11,7 +11,8 @@ namespace Shurikens
         private Vector3 _startPosition;
         private CalculatorOfShurikenPoints _calculatorPoints;
 
-        public CreatorShurikens(CalculatorOfShurikenPoints calculatorPoints, GameObject prefab, Transform parent, Vector3 startPosition)
+        public CreatorShurikens(CalculatorOfShurikenPoints calculatorPoints, Vector3 startPosition, 
+            GameObject prefab, Transform parent)
         {
             _calculatorPoints = calculatorPoints;
             _shuriken = prefab;
@@ -38,6 +39,7 @@ namespace Shurikens
         private PowerShuriken AddNewShuriken()
         {
             GameObject newShuriken = Object.Instantiate(_shuriken, _startPosition, Quaternion.identity, _parent);
+            newShuriken.SetActive(false);
             PowerShuriken shuriken = newShuriken.GetComponentInChildren<PowerShuriken>();
             if (shuriken == null)
                 throw new ArgumentNullException();

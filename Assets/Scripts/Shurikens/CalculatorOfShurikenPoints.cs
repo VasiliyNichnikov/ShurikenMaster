@@ -1,24 +1,42 @@
-﻿using DrawSlicing;
+﻿using System.Collections.Generic;
+using DrawSlicing;
+using Parameters.Shuriken;
 using UnityEngine;
 
 namespace Shurikens
 {
     public class CalculatorOfShurikenPoints
     {
+        private ShurikenParameters _parameters;
         private DivisionIntoSegments _separator;
-        private float _shurikenLength;
-        private float _space;
-        
-        public CalculatorOfShurikenPoints(DivisionIntoSegments separator, float shurikenLength, float space)
+        private const float _shurikenLength = 0.5753977f;
+        private Vector3 _startPosition;
+        private int _layer = 1 << 7;
+
+        public CalculatorOfShurikenPoints(DivisionIntoSegments separator, Vector3 startPosition,
+            ShurikenParameters parameters)
         {
-            _space = space;
             _separator = separator;
-            _shurikenLength = shurikenLength;
+            _parameters = parameters;
+            _startPosition = startPosition;
         }
 
         public Vector3[] GetPoints()
         {
-            return _separator.CalculateShurikenPoints(_shurikenLength, _space);
+            Vector3[] points = _separator.CalculateShurikenPoints(_parameters.DistanceBetweenRays);
+            List<Vector3> result = new List<Vector3>();
+            foreach (var point in points)
+            {
+                Vector3 direction = (point - _startPosition).normalized;
+
+                RaycastHit hit;
+                if (Physics.Raycast(point, direction, out hit, _parameters.MaxLengthRay, _layer))
+                {
+                    result.Add(hit.point);
+                }
+            }
+
+            return result.Count == 0 ? _separator.CalculateShurikenPoints(_shurikenLength, _parameters.DistanceBetweenShurikens) : result.ToArray();
         }
     }
 }

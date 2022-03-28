@@ -28,7 +28,7 @@ namespace Shurikens
         {
             while (true)
             {
-                _thisTransform.Translate(Direction * speed * Time.deltaTime);
+                _thisTransform.Translate(Direction.normalized * speed * Time.deltaTime);
                 yield return null;
             }
         }

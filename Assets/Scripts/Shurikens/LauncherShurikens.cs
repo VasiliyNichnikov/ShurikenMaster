@@ -1,22 +1,28 @@
-﻿namespace Shurikens
+﻿using System.Collections;
+using Parameters.Shuriken;
+using UnityEngine;
+
+namespace Shurikens
 {
     public class LauncherShurikens
     {
         private PowerShuriken[] _shurikens;
-        private float _speed;
+        private ShurikenParameters _parameters;
         
-        public LauncherShurikens(PowerShuriken[] shurikens, float speed)
+        public LauncherShurikens(PowerShuriken[] shurikens, ShurikenParameters parameters)
         {
             _shurikens = shurikens;
-            _speed = speed;
+            _parameters = parameters;
         }
 
-        public void Fly()
+        public IEnumerator Fly()
         {
             // TODO Написан тестовый алгоритм, его нужно будет поменять
             foreach (var shuriken in _shurikens)
             {
-                shuriken.StartFly(_speed);
+                shuriken.gameObject.SetActive(true);
+                shuriken.StartFly(_parameters.Speed);
+                yield return new WaitForSeconds(_parameters.DelayBetweenShurikenDepartures);
             }
         }
     }
