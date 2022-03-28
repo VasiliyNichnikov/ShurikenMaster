@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using DrawSlicing;
 using Parameters.Shuriken;
 using UnityEngine;
@@ -10,10 +11,9 @@ namespace Shurikens
         [SerializeField] private ShurikenParameters _parameters;
         [SerializeField] private Transform _parent;
         [SerializeField] private Transform _startTransform;
-        
-        private const float _shurikenLength = 0.5753977f;
+
+        private Transform _thisTransform;
         private PowerShuriken[] _shurikens;
-        private CalculatorOfShurikenPoints _shurikenPoints;
 
         public void Launch(DrawTrail drawTrail)
         {
@@ -22,13 +22,17 @@ namespace Shurikens
             CreateSurikens(drawTrail);
             LaunchSurikens();
         }
-        
+
+        private void Start()
+        {
+            _thisTransform = transform;
+        }
 
         private void CreateSurikens(DrawTrail drawTrail)
         {
             var separator = drawTrail.Line.Division;
-            _shurikenPoints = new CalculatorOfShurikenPoints(separator, _shurikenLength, _parameters.Space);
-            var creator = new CreatorShurikens(_shurikenPoints, _parameters.Shuriken, _parent, _startTransform.position);
+            var shurikenPoints = new CalculatorOfShurikenPoints(separator, _thisTransform.position, _parameters);
+            var creator = new CreatorShurikens(shurikenPoints, _startTransform.position, _parameters.Shuriken, _parent);
             _shurikens = creator.GetNewShurikens();
         }
 
@@ -37,21 +41,8 @@ namespace Shurikens
             if(_shurikens.Length == 0)
                 return;
             
-            var launcher = new LauncherShurikens(_shurikens, _parameters.Speed);
-            launcher.Fly();
-        }
-
-        private void OnDrawGizmos()
-        {
-            if (_shurikenPoints != null)
-            {
-                Vector3[] points = _shurikenPoints.GetPoints();
-                foreach (var point in points)
-                {
-                    Gizmos.color = Color.blue;
-                    Gizmos.DrawSphere(point, 0.1f);
-                }
-            }
+            var launcher = new LauncherShurikens(_shurikens, _parameters);
+            StartCoroutine(launcher.Fly());
         }
     }
 }

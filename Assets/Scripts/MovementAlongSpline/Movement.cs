@@ -12,7 +12,7 @@ namespace MovementAlongSpline
             get => _speedMovement;
             set
             {
-                if (value > 0 && value <= 50)
+                if (value > 0 && value <= 200)
                     _speedMovement = value;
                 else
                     throw new OverflowException();
