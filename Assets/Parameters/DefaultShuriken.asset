@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61a8e5bf8864554b6d9bf3673c9708a, type: 3}
   m_Name: DefaultShuriken
   m_EditorClassIdentifier: 
-  _distanceBetweenShurikens: 1
+  _distanceBetweenShurikens: 2
   _distanceBetweenRays: 0.2
   _shuriken: {fileID: 7581042082462152037, guid: 091fc837cd9cbfb4e982efc97ca52e19, type: 3}
   _delayBetweenShurikenDepartures: 0.1

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Enemies.Editor
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(StickmanContol))]
     public class StickmanControlEditor : UnityEditor.Editor
     {
@@ -59,4 +60,5 @@ namespace Enemies.Editor
             }
         }
     }
+#endif
 }

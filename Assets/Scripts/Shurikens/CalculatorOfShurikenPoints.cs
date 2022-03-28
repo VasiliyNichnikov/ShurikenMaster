@@ -25,17 +25,23 @@ namespace Shurikens
         {
             Vector3[] points = _separator.CalculateShurikenPoints(_parameters.DistanceBetweenRays);
             List<Vector3> result = new List<Vector3>();
+            Dictionary<Collider, int> hits = new Dictionary<Collider, int>();
             foreach (var point in points)
             {
                 Vector3 direction = (point - _startPosition).normalized;
-
                 RaycastHit hit;
-                if (Physics.Raycast(point, direction, out hit, _parameters.MaxLengthRay, _layer))
+                if (Physics.Raycast(_startPosition, direction, out hit, _parameters.MaxLengthRay, _layer))
                 {
-                    result.Add(hit.point);
+                    if (hits.ContainsKey(hit.collider))
+                        hits[hit.collider] += 1;
+                    else
+                        hits[hit.collider] = 1;
+                    
+                    if(hits[hit.collider] < 3)
+                        result.Add(hit.point);
                 }
             }
-
+            
             return result.Count == 0 ? _separator.CalculateShurikenPoints(_shurikenLength, _parameters.DistanceBetweenShurikens) : result.ToArray();
         }
     }

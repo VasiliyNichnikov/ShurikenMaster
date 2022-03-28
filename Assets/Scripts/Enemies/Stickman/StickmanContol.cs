@@ -17,6 +17,7 @@ namespace Enemies.Stickman
         private Animator _animator;
         private ManagementStateRagdoll _stateRagdoll;
         private IEnumerator _runningWalk;
+        private Collider _collider;
 
         public override void EnablingPreAttackDelay()
         {
@@ -32,6 +33,7 @@ namespace Enemies.Stickman
                 StopCoroutine(_runningWalk);
             _animator.enabled = false;
             _stateRagdoll.Destruction();
+            _collider.enabled = false;
             IsDead = true;
         }
 
@@ -39,6 +41,7 @@ namespace Enemies.Stickman
         {
             _thisTransform = transform;
             _animator = GetComponent<Animator>();
+            _collider = GetComponent<Collider>();
             _stateRagdoll = GetComponent<ManagementStateRagdoll>();
 
             _attacker = new Attacker(_parameter, _animator);

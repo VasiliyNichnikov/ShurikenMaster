@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace MovementAlongSpline.Editor
 {
+# if UNITY_EDITOR
     [CustomEditor(typeof(Engine))]
     public class EngineEditor : UnityEditor.Editor
     {
@@ -18,12 +19,10 @@ namespace MovementAlongSpline.Editor
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-# if UNITY_EDITOR
             if (Application.isPlaying == false)
             {
                 EnablingRealTimeRoute();
             }
-# endif
         }
 
         private void EnablingRealTimeRoute()
@@ -56,4 +55,5 @@ namespace MovementAlongSpline.Editor
             }
         }
     }
+# endif
 }

@@ -14,7 +14,7 @@ namespace Parameters.Shuriken
         public float DistanceBetweenRays => _distanceBetweenRays;
         public float DelayBetweenShurikenDepartures => _delayBetweenShurikenDepartures;
         
-        [SerializeField, Header("Расстояние между сюрикенами"), Range(0, 1)] private float _distanceBetweenShurikens;
+        [SerializeField, Header("Расстояние между сюрикенами"), Range(0, 5)] private float _distanceBetweenShurikens;
 
         // [SerializeField, Header("Длина сюрикена"), Range(0, 10)]
         // private float _lengthShuriken;

@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Spline.Editor
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(Spline))]
     public class SplineEditor : UnityEditor.Editor
     {
@@ -160,4 +161,5 @@ namespace Spline.Editor
             return point;
         }
     }
+#endif
 }
