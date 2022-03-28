@@ -11,7 +11,7 @@ namespace AttackZone
         
         private int _numberKilledEnemies;
         private IEnumerator _runningCheck;
-    
+        
         public void ToRun(Enemy[] enemies, MobsDestroyed challenge)
         {
             if (_runningCheck == null)

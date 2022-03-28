@@ -12,7 +12,7 @@ namespace Parameters.Segment
         [SerializeField, Range(0, 180), Header("Ограничения угла при вычисление отрезков")]
         private float _angleRestrictions;
         
-        [SerializeField, Range(0, 20), Header("Расстояние от камеры до трейла по Z")] private float _shiftZ;
+        [SerializeField, Range(0, 100), Header("Расстояние от камеры до трейла по Z")] private float _shiftZ;
         [SerializeField, Range(0, 1), Header("Шаг между точками отрезка")] private float _step;
     }
 }

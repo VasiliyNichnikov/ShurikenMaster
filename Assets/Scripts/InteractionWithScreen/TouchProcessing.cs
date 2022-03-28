@@ -1,5 +1,6 @@
 ﻿using DrawSlicing;
 using Shurikens;
+using TimeDilation;
 using UnityEngine;
 
 namespace InteractionWithScreen
@@ -8,12 +9,14 @@ namespace InteractionWithScreen
     {
         [SerializeField] private DrawTrail _clickTrail;
         [SerializeField] private SurikensControl _shurikens;
+        [SerializeField] private TimeControl _timeControl;
         
         private void Update()
         {
             Vector3 mousePosition = Input.mousePosition;
             if (Input.GetMouseButtonDown(0))
             {
+                // _timeControl.SlowDown();
                 _clickTrail.ClickDown(mousePosition);
             }
 
@@ -24,6 +27,7 @@ namespace InteractionWithScreen
 
             if (Input.GetMouseButtonUp(0))
             {
+                // _timeControl.Continue();
                 _clickTrail.ClickUp(mousePosition);
                 _shurikens.Launch(_clickTrail);
             }
