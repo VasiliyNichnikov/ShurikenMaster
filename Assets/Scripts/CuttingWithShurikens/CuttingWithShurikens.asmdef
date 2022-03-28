@@ -1,0 +1,17 @@
+{
+    "name": "CuttingWithShurikens",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ec7d4872bf29854459a029c645e3eb8e",
+        "GUID:ccffedc0aa25a4a478ded713696854eb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

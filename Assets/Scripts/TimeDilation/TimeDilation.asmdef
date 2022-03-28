@@ -1,0 +1,17 @@
+{
+    "name": "TimeDilation",
+    "rootNamespace": "",
+    "references": [
+        "GUID:37a6741b207ddef4abfd6f860dd40ac4",
+        "GUID:831350a750507de42b751af292ca50b8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
