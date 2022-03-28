@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DefaultSegmentParameters
   m_EditorClassIdentifier: 
   _angleRestrictions: 20
-  _shiftZ: 20
+  _shiftZ: 10
   _step: 1
