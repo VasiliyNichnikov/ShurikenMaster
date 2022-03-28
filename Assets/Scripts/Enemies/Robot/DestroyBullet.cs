@@ -1,4 +1,5 @@
-﻿using MyUtils;
+﻿using LevelTransition;
+using MyUtils;
 using UnityEngine;
 
 namespace Enemies.Robot
@@ -9,7 +10,7 @@ namespace Enemies.Robot
         {
             if (PlayerUtils.CheckThatObjectIsPlayer(other.gameObject))
             {
-                print("GameOver (Bullet)");
+                WorkingWithLevel.Reload();
                 Destroy(gameObject);
             }
         }

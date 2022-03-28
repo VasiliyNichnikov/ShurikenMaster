@@ -7,11 +7,15 @@ namespace Enemies.Robot
     public class Weapon : Action
     {
         private Transform _parentBullet;
+        private ParticleSystem _particleAttack;
 
-        public Weapon(Transform transformObj, Transform player, Transform parentBullet, RobotParameter parameter) :
+        public Weapon(Transform transformObj, Transform player, Transform parentBullet, 
+            ParticleSystem particle,
+            RobotParameter parameter) :
             base(transformObj, player, parameter)
         {
             _parentBullet = parentBullet;
+            _particleAttack = particle;
         }
 
         public IEnumerator Shoot()
@@ -22,6 +26,7 @@ namespace Enemies.Robot
                 float delay = Random.Range(Parameter.MinDelayBetweenShooting, Parameter.MaxDelayBetweenShooting);
                 yield return new WaitForSeconds(delay);
                 Transform bullet = CreateBullet();
+                _particleAttack.Play();
                 yield return Fly(direction, bullet);
             }
         }
@@ -41,7 +46,8 @@ namespace Enemies.Robot
                 bullet.Translate(direction * Parameter.SpeedBullet * Time.deltaTime);
                 yield return null;
             }
-            Object.Destroy(bullet.gameObject);
+            if(bullet != null)
+                Object.Destroy(bullet.gameObject);
         }
     }
 }

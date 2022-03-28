@@ -15,12 +15,12 @@ namespace Enemies.Stickman
         private Walker _walker;
         private Transform _thisTransform;
         private Animator _animator;
-
+        private ManagementStateRagdoll _stateRagdoll;
         private IEnumerator _runningWalk;
 
         public override void EnablingPreAttackDelay()
         {
-            if (_runningWalk != null) return;
+            if (_runningWalk != null || IsDead) return;
 
             _runningWalk = _walker.Go(_attacker.StrikeHand());
             StartCoroutine(_runningWalk);
@@ -30,13 +30,16 @@ namespace Enemies.Stickman
         {
             if(_runningWalk != null)
                 StopCoroutine(_runningWalk);
-            Destroy(this.gameObject);
+            _animator.enabled = false;
+            _stateRagdoll.Destruction();
+            IsDead = true;
         }
 
         private void Start()
         {
             _thisTransform = transform;
             _animator = GetComponent<Animator>();
+            _stateRagdoll = GetComponent<ManagementStateRagdoll>();
 
             _attacker = new Attacker(_parameter, _animator);
             _walker = new Walker(_parameter, _thisTransform, EndPoint, _animator);

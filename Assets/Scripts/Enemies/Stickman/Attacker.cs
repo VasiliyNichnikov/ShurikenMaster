@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using LevelTransition;
 using Parameters.Enemy;
 using UnityEngine;
 
@@ -19,7 +20,7 @@ namespace Enemies.Stickman
         {
             ChangeConditionAnimator(true);
             yield return new WaitForSeconds(0.5f);
-            MonoBehaviour.print("GameOver (Stickman)");
+            WorkingWithLevel.Reload();
         }
 
         private void ChangeConditionAnimator(bool toRun = false)

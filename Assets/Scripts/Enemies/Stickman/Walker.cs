@@ -24,10 +24,14 @@ namespace Enemies.Stickman
             var positionObject = _transformObject.position;
             float distance = Vector3.Distance(positionObject, _endPoint);
             ChangeConditionAnimator(true);
+            
+            Quaternion rotation = Quaternion.LookRotation(_endPoint - positionObject);
+
             while (distance > _parameter.MinDistanceToPoint)
             {
                 positionObject = _transformObject.position;
                 positionObject = Vector3.MoveTowards(positionObject, _endPoint, _parameter.Speed * Time.deltaTime);
+                _transformObject.rotation = Quaternion.Lerp(_transformObject.rotation, rotation, _parameter.Speed * Time.deltaTime);
                 distance = Vector3.Distance(positionObject, _endPoint);
                 _transformObject.position = positionObject;
                 yield return null;
