@@ -224,7 +224,7 @@ MonoBehaviour:
   SafeMode: 3
   Direction: 0
   AutoChangeDirectionOnEnd: 0
-  AutoPlayOnStart: 0
+  AutoPlayOnStart: 1
   AutoPlayOnEnable: 1
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f129222f02399ae42b78955d953ada11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Active: 0
+  Active: 1
   Label: Deleter
   Chance: 100
   Timing:
