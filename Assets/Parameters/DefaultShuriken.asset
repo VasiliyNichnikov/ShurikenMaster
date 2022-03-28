@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _space: 1
   _shuriken: {fileID: 7581042082462152037, guid: 091fc837cd9cbfb4e982efc97ca52e19, type: 3}
-  _speed: 4
+  _speed: 2
