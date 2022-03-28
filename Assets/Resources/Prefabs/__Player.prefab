@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parameters: {fileID: 11400000, guid: dec174437269c9944a61792ac2318353, type: 2}
   _camera: {fileID: 4677062572766530134}
-  _particleTrail: {fileID: 4677062572080261055}
+  _particleTrail: {fileID: 0}
 --- !u!1 &4677062572766530120
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,7 +77,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4677062573721020932}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!20 &4677062572766530134
 Camera:
@@ -199,7 +199,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4677062571936025440}
-  - {fileID: 4677062572065098835}
   - {fileID: 4677062572766530133}
   - {fileID: 4677062573818765638}
   m_Father: {fileID: 0}
@@ -259,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _disableEngine: 0
-  _spacing: 0.25
+  _spacing: 1
   _spline: {fileID: 0}
   _selectedObject: {fileID: 4677062573721020932}
 --- !u!114 &4677062573721020943
@@ -289,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clickTrail: {fileID: 4677062571936025455}
   _shurikens: {fileID: 4677062573721020941}
-  _timeControl: {fileID: 0}
+  _timeControl: {fileID: 4677062573721020943}
 --- !u!114 &4677062573721020941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,148 +332,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4677062573721020932}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4677062572064725857
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4677062573721020932}
-    m_Modifications:
-    - target: {fileID: 134832, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 144762, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_Name
-      value: ParticleTrail
-      objectReference: {fileID: 0}
-    - target: {fileID: 144762, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 148188, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19916940, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19916940, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19916940, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19916940, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 19941132, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19941132, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19941132, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19941132, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 19949180, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19949180, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19949180, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19949180, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 19995566, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_UseCustomVertexStreams
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19995566, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19995566, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19995566, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-      propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
---- !u!4 &4677062572065098835 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 415538, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-  m_PrefabInstance: {fileID: 4677062572064725857}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4677062572080261055 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 19872990, guid: 88cf0884542d69c48a0f59e0f17ade92, type: 3}
-  m_PrefabInstance: {fileID: 4677062572064725857}
-  m_PrefabAsset: {fileID: 0}

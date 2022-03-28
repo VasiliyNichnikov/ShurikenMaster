@@ -9,7 +9,7 @@ namespace DrawSlicing
         
         [SerializeField] private TrailParameters _parameters;
         [SerializeField] private Camera _camera;
-        [SerializeField, Header("Trail движения")] private ParticleSystem _particleTrail;
+        // [SerializeField, Header("Trail движения")] private ParticleSystem _particleTrail;
         
         private Line _line;
         private Trail _trail;
@@ -19,28 +19,28 @@ namespace DrawSlicing
         {
             _thisTransform = transform;
             _line = new Line(_parameters, _thisTransform);
-            _trail = new Trail(_particleTrail);
+            // _trail = new Trail(_particleTrail);
         }
         
         public void ClickDown(Vector3 newPosition)
         {
             _line.Clear();
             Vector3 worldPosition = GetWorldPosition(newPosition);
-            _trail.ClickDown(worldPosition);
+            // _trail.ClickDown(worldPosition);
             _line.AddPoint(worldPosition);
         }
 
         public void ClickDrag(Vector3 newPosition)
         {
             Vector3 worldPosition = GetWorldPosition(newPosition);
-            _trail.ClickDrag(worldPosition);
+            // _trail.ClickDrag(worldPosition);
             _line.AddPoint(worldPosition);
         }
 
         public void ClickUp(Vector3 newPosition)
         {
-            Vector3 worldPosition = GetWorldPosition(newPosition);
-            _trail.ClickUp(worldPosition);
+            // Vector3 worldPosition = GetWorldPosition(newPosition);
+            // _trail.ClickUp(worldPosition);
         }
 
         private Vector3 GetWorldPosition(Vector3 mousePosition)
